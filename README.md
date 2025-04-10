@@ -1,2 +1,2 @@
-## SQL & C#
+## Antra Full Stack Developer Training
 
