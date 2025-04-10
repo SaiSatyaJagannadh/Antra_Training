@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            width: 500px;
+            border: double 5px #000;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        
+        .tile {
+            background: linear-gradient(to bottom, #e0e0e0, #b0b0b0);
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            font-weight: bold;
+            color: #3030FF;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            grid-column: span 4;
+            background: #f0f0f0;
+            height: 80px;
+            font-size: 24px;
+        }
+        
+        .double-width {
+            grid-column: span 2;
+        }
+        
+        .triple-width {
+            grid-column: span 3;
+        }
+        
+        .small {
+            height: 50px;
+            font-size: 14px;
+        }
+        
+        .social-column {
+            display: grid;
+            grid-template-rows: 50px 50px;
+            grid-gap: 5px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-gap: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header Row -->
+        <div class="tile header">Antra Life</div>
+        
+        <!-- Second Row -->
+        <div class="tile double-width">GOOGLE</div>
+        <div class="tile double-width">GitHub</div>
+        
+        <!-- Third Row -->
+        <div class="tile">Facebook</div>
+        <div class="tile">GMail</div>
+        <div class="tile">YouTube</div>
+        <div class="tile">2048</div>
+        
+        <!-- Fourth Row -->
+        <div class="tile">Food</div>
+        <div class="tile double-width">Game</div>
+        <div class="social-column">
+            <div class="tile small">Social life</div>
+            <div class="tile small">Sleep</div>
+        </div>
+        
+        <!-- Last Row - No Gap Above -->
+        <div class="tile triple-width" style="margin-top: -5px;">Beer>>></div>
+        <div class="tile" style="margin-top: -5px;">WC</div>
+    </div>
+</body>
+</html>
